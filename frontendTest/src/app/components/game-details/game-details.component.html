@@ -1,0 +1,83 @@
+<div class="row">
+    <div class="col-12">
+        <a href="/" type="button" class="btn btn-danger">
+            <svg fill="#fff" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 52 52"
+                enable-background="new 0 0 52 52" xml:space="preserve">
+                <path d="M48.6,23H15.4c-0.9,0-1.3-1.1-0.7-1.7l9.6-9.6c0.6-0.6,0.6-1.5,0-2.1l-2.2-2.2c-0.6-0.6-1.5-0.6-2.1,0
+	                L2.5,25c-0.6,0.6-0.6,1.5,0,2.1L20,44.6c0.6,0.6,1.5,0.6,2.1,0l2.1-2.1c0.6-0.6,0.6-1.5,0-2.1l-9.6-9.6C14,30.1,14.4,29,15.3,29
+	                h33.2c0.8,0,1.5-0.6,1.5-1.4v-3C50,23.8,49.4,23,48.6,23z" />
+            </svg>
+        </a>
+    </div>
+
+    <div class="col-12 mt-2">
+        <h1> Detalle de juego:</h1>
+    </div>
+</div>
+
+<div class="row mt-2">
+    <div class="col-sm-4">
+        <img id="detail-image" class="col-8 col-sm-12" alt="Imagen del juego {{this.data?.title}}"
+            src="{{this.data?.thumbnail}}" />
+    </div>
+
+    <div class="col-md-8">
+        <dl class="row">
+            <dt>
+                Titulo:
+            </dt>
+            <dd>
+                {{this.data?.title}}
+            </dd>
+            <dt>
+                Descripción:
+            </dt>
+            <dd>
+                {{this.data?.short_description}}
+            </dd>
+        </dl>
+
+        <div class="d-none d-sm-block">
+            <table class="table">
+                <thead class="table-secondary">
+                    <tr>
+                        <th>Género</th>
+                        <th>Plataforma</th>
+                        <th>Desarrolladora</th>
+                        <th>Publicado por</th>
+                        <th>Lanzado por</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{this.data?.genre}}</td>
+                        <td>{{this.data?.platform}}</td>
+                        <td>{{this.data?.developer}}</td>
+                        <td>{{this.data?.publisher}}</td>
+                        <td>{{this.pipe.transform(this.data?.release_date,'dd-MM-yyyy')}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="d-block d-sm-none">
+            <dl class="row">
+                <dt>Género</dt>
+                <dd>{{this.data?.genre}}</dd>
+                
+                <dt>Plataforma</dt>
+                <dd>{{this.data?.platform}}</dd>
+                
+                <dt>Desarrolladora</dt>
+                <dd>{{this.data?.developer}}</dd>
+                
+                <dt>Publicado por</dt>
+                <dd>{{this.data?.publisher}}</dd>
+                
+                <dt>Lanzado por</dt>
+                <dd>{{this.pipe.transform(this.data?.release_date,'dd-MM-yyyy')}}</dd>
+            </dl>
+        </div>
+
+    </div>
+</div>

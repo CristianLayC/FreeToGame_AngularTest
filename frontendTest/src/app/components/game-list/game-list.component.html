@@ -1,0 +1,17 @@
+<h1 class="text-center titleComponent">Listado de juegos</h1>
+
+<div class="row">
+    @for (game of data; track game.id) {
+        <div class="col-sm-3 d-flex align-items-stretch mt-5">
+            <app-game-card
+                id="{{ game.id }}"
+                title="{{ game.title }}"
+                thumbnail="{{ game.thumbnail }}"
+                platform="{{ game.platform }}"
+                short_description="{{ game.short_description}}" 
+                genre="{{ game.genre }}"
+                lazyLoad="lazy"
+            ></app-game-card>
+        </div>
+    }
+</div>

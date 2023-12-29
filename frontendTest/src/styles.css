@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+:root{
+    --blue: #005c7b;
+    --yellow: #ffdc34;
+    --grey: #808080;
+}
+
+body{
+    background-color: #ebebeb;
+    font-family: Inter,Roboto,Arial,sans-serif;
+}
+
+.titleComponent{
+    margin-bottom: 1.5rem;
+}
